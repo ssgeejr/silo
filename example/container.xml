@@ -1,0 +1,37 @@
+<container xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='container.xsd'>
+	<config>
+		<application>test</application>
+		<application_version fixed='true' empty='true'/>		
+		<server>http://gee-5/artifactory</server>
+		<label>true</label>
+		<repostiory>
+			<production>libs-release-local</production>
+			<snapshot>libs-snapshot-local</snapshot>
+		</repostiory>
+		<docker>
+			<clean>True</clean>
+			<euthanize>true</euthanize>
+			<push>true</push>
+			<tag>true</tag>
+			<host>docker.repo.gee-5</host>
+		</docker>
+		<global>
+			<overwrite enforce='true'>true</overwrite>
+			<dir enforce='false'>/tmp</dir>
+			<production enforce='false'>true</production>
+			<purge enforce='true'>true</purge>
+			<purge_filetype enforce='false'>111</purge_filetype>
+		</global>
+	</config>
+
+	<artifacts>
+		<artifact dir='cache-core' overwrite='false' production='true' target='target111.jar' purge='false' filetype='111'>
+			<groupid>gee-5.silo.demo</groupid>
+			<artifactid>silo-artifact</artifactid>
+		</artifact>
+	</artifacts>
+	
+	<files>
+		<file dir='files' overwrite='false' target='jdk.tar.gz' purge='false' filetype='222' source='http://gee-5/artifactory/remote/oracle/jdk/7u71-linux/jdk-7u71-linux-x64.tar.gz' />
+	</files>
+</container>
