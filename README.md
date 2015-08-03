@@ -143,4 +143,6 @@ exit
   * add the ability to do recurse a folder (feature/closed)
   * have the ability to update the Dockerfile's #SILO_LABEL with the files and versions that are inside the container  (feature/open)
   * expand the Dockerfile update #SILO_LABEL feature to include the ability to attach the contents of a file  (feature/open)
+  * add the ability to configure the executable command. Change it from only Docker to maven or ant or make ...  (feature/proposed)
+  
   
