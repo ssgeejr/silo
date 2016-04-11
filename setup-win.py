@@ -37,6 +37,6 @@ setup(
         "Operating System :: OS Independent",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
-    install_requires = ['python>=2.6.0'],
+    install_requires = [],
 
 )
